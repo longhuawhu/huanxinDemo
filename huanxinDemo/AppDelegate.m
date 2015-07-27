@@ -51,4 +51,31 @@
     [[EaseMob sharedInstance] applicationWillTerminate:application];
 }
 
+#pragma mark -- 环信代理
+/*!
+ @method
+ @brief 用户将要进行自动登录操作的回调
+ @discussion
+ @param loginInfo 登录的用户信息
+ @param error     错误信息
+ @result
+ */
+- (void)willAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
+    NSLog(@"willAutoLoginWithInfo");
+}
+
+/*!
+ @method
+ @brief 用户自动登录完成后的回调
+ @discussion
+ @param loginInfo 登录的用户信息
+ @param error     错误信息
+ @result
+ */
+- (void)didAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
+    NSLog(@"didAutoLoginWithInfo");
+    
+}
+
+
 @end
